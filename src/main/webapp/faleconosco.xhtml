@@ -1,0 +1,34 @@
+<ui:composition template="WEB-INF/template/template.xhtml"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core" 
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="corpo-pagina">
+		<h:form id="form-geral">
+		  <fieldset>
+		    <legend>Envie-nos a sua mensagem através do formulário abaixo.</legend>
+		    
+		    <label>Nome</label>
+		    <h:inputText type="text" placeholder="Nome" />
+		    
+		    <label>E-mail</label>
+		    <h:inputText type="text" placeholder="E-mail"/>
+		
+		    <label>Cidade</label>
+		    <h:inputText type="text" placeholder="Cidade"/>
+		    
+		    <label>Assunto</label>
+		    <h:inputText type="text" placeholder="Mensagem"/>
+		    
+		    <label>Mensagem</label>
+		    <h:inputTextarea rows="5" cols="10"></h:inputTextarea>
+		        
+			<br/>
+		    <h:commandButton actionListener="#{faleConosco.gravar}" styleClass="btn btn-success" value="Enviar" />
+		  </fieldset>
+		
+		</h:form>
+	</ui:define>
+</ui:composition>

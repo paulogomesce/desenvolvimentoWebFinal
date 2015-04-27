@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+<h:head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<title>Trabalho UECE</title>
+  	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css"/>
+  	<h:outputStylesheet library="css" name="css_frutacor.css"/>
+</h:head>
+<h:body>
+
+	<!-- Cabeçalho da Página -->
+	<ui:insert name="cabecalho">
+		<ui:include src="cabecalho.xhtml" />
+	</ui:insert>
+	
+	<!-- Menu do Sistema -->
+	<ui:insert name="menu">
+		<ui:include src="menu.xhtml" />
+	</ui:insert>
+
+	<!-- Corpo da Página -->
+    <div id="area-de-trabalho">
+        <p:messages id="mgs" globalOnly="true" showDetail="true" showSummary="true" showIcon="true"/>
+  		<ui:insert name="corpo-pagina">Este e o corpo da pagina</ui:insert>
+  	</div>      	
+
+	<!-- Rodapé da página -->
+	<ui:insert name="rodape">
+		<ui:include src="rodape.xhtml" />
+    </ui:insert>     
+ 	 	
+ 	<h:outputScript library="bootstrap" name="js/bootstrap.min.js"/>
+ 	<h:outputScript library="js" name="jquery-latest.js"/>   
+</h:body>
+</html>
